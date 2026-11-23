@@ -25,7 +25,6 @@
       <p class="header-sub">〜 毎日の癒しをお届け 〜</p>
     </header>
 
-
     <main>
       <!-- 今日 -->
       <section id="view-today" class="view active">
@@ -53,7 +52,6 @@
         </div>
       </section>
 
-
       <!-- 図鑑 -->
       <section id="view-zukan" class="view">
         <h2 class="view-title">🐾 犬種図鑑</h2>
@@ -61,7 +59,50 @@
         <div id="zukan-grid" class="grid"></div>
       </section>
 
-
       <!-- 過去 -->
       <section id="view-past" class="view">
         <h2 class="view-title">📅 過去のワンちゃん</h2>
+        <p class="view-desc">過去30日に登場したワンちゃんたちです。</p>
+        <div id="past-list" class="list"></div>
+      </section>
+
+      <!-- お気に入り -->
+      <section id="view-fav" class="view">
+        <h2 class="view-title">♡ お気に入り</h2>
+        <p class="view-desc">お気に入りに登録したワンちゃんたちです。</p>
+        <div id="fav-grid" class="grid"></div>
+        <div id="fav-empty" class="empty" hidden>
+          <p class="empty-icon">🐶</p>
+          <p>まだお気に入りがいません。<br>気になる子を見つけたら ♡ を押してね。</p>
+        </div>
+      </section>
+
+      <!-- 詳細 -->
+      <section id="view-detail" class="view">
+        <button id="detail-back" class="btn pill back-btn" type="button">← もどる</button>
+        <div class="card detail-card">
+          <div class="img-wrap"><img id="detail-img" alt=""></div>
+          <h2 id="detail-name"></h2>
+          <p id="detail-personality" class="personality"></p>
+          <div id="detail-tags" class="tags"></div>
+          <p id="detail-intro" class="intro"></p>
+          <div class="bubble"><p id="detail-message"></p></div>
+          <div class="actions"><button id="detail-fav" class="btn pill fav-btn" type="button">♡ お気に入り</button></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><p>Today's Wan! — 毎日、ワンちゃんと一緒に。</p></footer>
+
+    <!-- 下部タブ -->
+    <nav class="tabbar" aria-label="メインメニュー">
+      <button class="tab active" data-view="today" type="button">🏠<span>今日</span></button>
+      <button class="tab" data-view="zukan" type="button">📖<span>図鑑</span></button>
+      <button class="tab" data-view="past" type="button">📅<span>過去</span></button>
+      <button class="tab" data-view="fav" type="button">♡<span>お気に入り</span></button>
+    </nav>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
